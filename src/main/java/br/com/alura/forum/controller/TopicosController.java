@@ -91,7 +91,7 @@ public class TopicosController {
 		return ResponseEntity.notFound().build();
 	}
 	
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/{id}")	
 	@Transactional
 	@CacheEvict(value = "listaTopicos", allEntries = true)
 	public ResponseEntity<?> remover(@PathVariable Long id) {
